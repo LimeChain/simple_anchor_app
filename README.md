@@ -61,7 +61,7 @@ Run this in the anchor project directory:
 SBF_OUT_DIR=$PWD/target/deploy SBF_TRACE_DIR=$PWD/target/sbf_trace_dir surfpool-tracing start
 ```
 
-> **Note:** The `SBF_OUT_DIR=$PWD/target/deploy` environment variable won't be necessary once Surfpool catches up with [LiteSVM's ELF data reading](https://github.com/LiteSVM/litesvm/pull/278).
+> **Note:** Setting `SBF_TRACE_DIR` is what signals `LiteSVM` to enable register tracing dumps. The `SBF_OUT_DIR=$PWD/target/deploy` environment variable won't be necessary once Surfpool catches up with [LiteSVM's ELF data reading](https://github.com/LiteSVM/litesvm/pull/278).
 
 ### Run Anchor tests
 
@@ -88,4 +88,4 @@ genhtml --output-directory coverage target/sbf_trace_dir/*.lcov --rc branch_cove
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [LimeChain](https://limechain.tech)
