@@ -18,6 +18,8 @@ cd surfpool
 cargo build --features register-tracing --release
 ```
 
+> **Note:** If [PR #496](https://github.com/txtx/surfpool/pull/496) is not yet merged, you will need to checkout that branch first.
+
 ### Configure Cargo.toml for coverage
 
 To generate accurate coverage reports, you need to disable optimizations, enable debug symbols, and disable LTO in your workspace `Cargo.toml`:
