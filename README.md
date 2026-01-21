@@ -45,7 +45,11 @@ rm target/deploy/simple_anchor_app.*
 cargo build-sbf --tools-version v1.51 --arch v1 --debug
 ```
 
+> **Why this complexity?** Anchor is opinionated and always builds with SBPFv0. We run `anchor build` first to generate the IDL and other artifacts, then remove the compiled program and rebuild it manually with `cargo build-sbf` using SBPFv1 (`--arch v1`) for better coverage results.
+
 > **Note:** At the time of writing, best coverage results are achieved with SBPFv1 (dynamic stack frames), which is why we use `--arch v1`. The `--tools-version` can be v1.51 or higher, and `--debug` is required for coverage to work.
+
+> **Warning:** Due to cleaning steps (`anchor clean` or `cargo clean`), the keypair and program ID may get out of sync. If you encounter issues, it's best to clean everything and start fresh with `anchor clean`, then run `anchor keys sync` to resync the keys, followed by the full build process.
 
 ## Run Tests
 
