@@ -7,6 +7,7 @@ A simple Anchor application for Solana with code coverage support using Surfpool
 - [Anchor](https://www.anchor-lang.com/)
 - [Surfpool](https://github.com/txtx/surfpool) with register-tracing feature
 - [sbpf-coverage](https://crates.io/crates/sbpf-coverage)
+- [lcov](https://github.com/linux-test-project/lcov) - for generating HTML coverage reports (`brew install lcov` on macOS, `apt install lcov` on Ubuntu, or `dnf install lcov` on Fedora)
 
 ## Build
 
